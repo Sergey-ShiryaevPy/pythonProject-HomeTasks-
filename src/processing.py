@@ -1,5 +1,8 @@
 def filter_by_state(list_of_dict: list, chosen_state: str = "EXECUTED") -> list:
-    '''pass'''
+    '''Функция принимает список словарей и опционально значение для ключа
+state (по умолчанию 'EXECUTED'). Функция возвращает новый список словарей, содержащий только те словари, у которых ключ
+state соответствует указанному значению'''
+
     new_list_of_dict = []
     for dictionary in list_of_dict:
         if dict.get("state") == chosen_state:
@@ -8,6 +11,8 @@ def filter_by_state(list_of_dict: list, chosen_state: str = "EXECUTED") -> list:
 
 
 def sort_by_state(list_of_dict: list, is_reverse: bool = True) -> list
-    '''pass'''
+    '''Функция принимает список словарей и необязательный параметр, задающий порядок сортировки
+    (по умолчанию — убывание).     Функция возвращает новый список, отсортированный по дате'''
+
     sorted_list = sorted(list_of_dict, key = lambda x: x["date"],reverce=is_reverse)
     return sorted_list
